@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy button Styles</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Augusto , cherrycode.com.br"> 
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+        ::selection {
+            background: #8a2be2;
+            color: #fff;
+        }
+
+        body {
+            background: rgb(138,43,226);
+            background: radial-gradient(circle, rgba(138,43,226,1) 20%, rgba(170,155,184,1) 100%);
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 100px;
+            line-height: 20px;
+            margin-bottom: 0;
+            color: #fff;
+        }
+
+        p {
+            color: #dadada;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        #input {
+            padding: 25px 50px 25px 30px;
+            border: 0;
+            outline: none;
+            color: #727272;
+            font-size: 14px;
+            font-weight: 500;
+            width: 300px;
+            font-family: 'Poppins', sans-serif;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #buttonCopy {
+            background: #db5a8b;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+            font-family: Verdana;
+            font-weight: 500;
+            width: 200px;
+            font-size: 16px;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+    </style>
+</head>
+    <body>
+        <h1>Copy button Styles</h1>
+        <p>See the source code to learn how to make an equal.</p>
+        <form class="form">
+            <input id="input" type="text" value="Text to be copied" readonly>
+            <button id="buttonCopy">Copy</button>
+        </form>
+
+    <script>
+        document.getElementById('buttonCopy').addEventListener('click', execCopy);
+
+        function execCopy() {
+            document.querySelector("#input").select();
+            document.execCommand("copy");
+        }        
+    </script>
+    
+    </body>
+</html>
